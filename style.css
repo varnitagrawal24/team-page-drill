@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+}
+body {
+  height: 100vh;
+  width: 100vw;
+}
+header {
+  margin-top: 110px;
+  display: flex;
+  justify-content: space-evenly;
+}
+header h1 {
+  font-family: serif;
+}
+.description span {
+  font-weight: 600;
+}
+.description p {
+  line-height: 27px;
+  width: 333px;
+  text-align: left;
+}
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 1rem 18%;
+  gap: 1rem;
+}
+.pic {
+  position: relative;
+  width: 16.5rem;
+  height: 24rem;
+}
+
+.pic .position {
+  font-family: serif;
+  text-transform: uppercase;
+  font-size: 16px;
+  position: absolute;
+  transform: rotate(90deg) translateX(50%);
+  text-wrap: nowrap;
+  right: -2.5rem;
+}
+.pic img {
+  width: 14rem;
+  height: 21rem;
+  border-radius: 1rem;
+  object-fit: contain;
+}
+.pic .name {
+  display: block;
+  font-weight: 600;
+}
+.pic:nth-child(3n + 2) {
+  margin-top: 5rem;
+}
+
+@media screen and (max-width: 1000px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .pic:nth-child(3n + 2) {
+    margin-top: 0rem;
+  }
+  .pic:nth-child(2n + 2) {
+    margin-top: 5rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  header {
+    flex-direction: column;
+    margin: 1rem;
+  }
+  .description {
+    margin: 1rem 0;
+  }
+  main {
+    margin: 1rem;
+  }
+
+  .pic {
+    width: 9rem;
+    height: 14rem;
+  }
+  .pic img {
+    width: 11rem;
+    height: 18rem;
+  }
+  .pic .position {
+    right: -7rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  :root {
+    font-size: 14px;
+  }
+  header {
+    margin: 2rem;
+  }
+  .pic {
+    width: 8rem;
+    height: 15rem;
+  }
+  .pic img {
+    width: 7rem;
+    height: 10rem;
+  }
+  .pic .position {
+    right: -5rem;
+  }
+  .pic:nth-child(2n + 2) {
+    margin-top: 2rem;
+  }
+}
